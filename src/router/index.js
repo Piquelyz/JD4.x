@@ -8,7 +8,12 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: '/',
-    name: 'Register',
+    name: 'redirect',
+    redirect: '/login'
+  },
+  {
+    path: '/register',
+    name: 'register',
     component: Register
   },
   {

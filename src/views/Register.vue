@@ -1,5 +1,7 @@
 <template>
     <div>
+        <img class="headerimg" src="
+        https://xd-video-pc-img.oss-cn-beijing.aliyuncs.com/xdclass_pro/bannner/1904/element.png" alt="">
         <cube-form
         :model="model"
         :schema="schema"
@@ -83,5 +85,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-
+    .headerimg
+        height 150px
+        width 100%
 </style>
