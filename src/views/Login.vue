@@ -73,7 +73,7 @@ export default {
     },
     methods: {
         submitHandler(e) {
-            e.preventDefault();
+            e.preventDefault();//防止冒泡
             this.$http.get('/api/register', {params: this.model}).then(res =>{
                 console.log(res.data.success)
             }).catch(err=>{

@@ -26,6 +26,24 @@ module.exports = {
                 })
               }
             })
+            
+            // 登录接口
+            let tokenKey= 'happy666'
+            app.get('/api/login', (req, res)=>{
+              const {username, password} = req.query
+              if(username == 'yongzhi' && password == '666666' || username == 'yongzhi2' && password == '666666'){
+                res.json({
+                  code: 0,
+                  message: '登陆成功',
+                  token: tokenKey + '-' + username + '-' + (new Date().getTime() + 60*60*1000)                
+                })
+              } else {
+                res.json({
+                  code: 1,
+                  message: '账号或密码错误'
+                })
+              }
+            }
         }
       }
     },
