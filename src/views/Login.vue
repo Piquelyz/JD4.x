@@ -64,7 +64,7 @@ export default {
                     },
                     {
                         type: 'submit',
-                        label: '注册'
+                        label: '登陆'
                         
                     }
                 ]
@@ -72,13 +72,26 @@ export default {
         }
     },
     methods: {
-        submitHandler(e) {
+        async submitHandler(e) {
             e.preventDefault();//防止冒泡
-            this.$http.get('/api/register', {params: this.model}).then(res =>{
-                console.log(res.data.success)
-            }).catch(err=>{
+            // this.$http.get('/api/register', {params: this.model}).then(res =>{
+            //     console.log(res.data.success)
+            // }).catch(err=>{
+            //     console.log(err)
+            // })
+            try {
+                const result = await this.$http.get('/api/login', {params: this.model})
+                if(result.data.code == '0') {
+                    //commit 调用 mutation 方法, dispatch 调用action
+                    this.$store.commit('settoken', result.data.token)
+                    window.localStorage.setItem('token', result.data.token)
+                } else {
+                    alert(result.message)
+                }
+            } catch(err) {
                 console.log(err)
-            })
+            }
+
         }
     }
 }

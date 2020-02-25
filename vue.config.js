@@ -26,7 +26,7 @@ module.exports = {
                 })
               }
             })
-            
+
             // 登录接口
             let tokenKey= 'happy666'
             app.get('/api/login', (req, res)=>{
@@ -43,10 +43,11 @@ module.exports = {
                   message: '账号或密码错误'
                 })
               }
-            }
+            })
         }
       }
     },
+    
 
     css: {
       loaderOptions: {
