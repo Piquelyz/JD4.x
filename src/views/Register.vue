@@ -75,7 +75,7 @@ export default {
         submitHandler(e) {
             e.preventDefault();
             this.$http.get('/api/register', {params: this.model}).then(res =>{
-                console.log(res.data.success)
+                console.log(res.success)
             }).catch(err=>{
                 console.log(err)
             })
