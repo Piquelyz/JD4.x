@@ -29,7 +29,7 @@ module.exports = {
 
             // 登录接口
             let tokenKey= 'happy666'
-            app.get('/api/login', (req, res)=>{
+            app.get('/api/login', (req, res) => {
               const {username, password} = req.query
               if(username == 'yongzhi' && password == '666666' || username == 'yongzhi2' && password == '666666'){
                 res.json({
@@ -43,7 +43,28 @@ module.exports = {
                   message: '账号或密码错误'
                 })
               }
-            })
+              }),
+
+              //首页轮播图数据接口
+              app.get('/api/banner', (req, res) => {
+                res.json({
+                  data: [
+                    {
+                      url: 'http://www.didichuxing.com/',
+                      image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide01.png'
+                    },
+                    {
+                      url: 'http://www.didichuxing.com/',
+                      image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide02.png'
+                    },
+                    {
+                      url: 'http://www.didichuxing.com/',
+                      image: '//webapp.didistatic.com/static/webapp/shield/cube-ui-examples-slide03.png'
+                    }
+                    ]
+                })              
+              })
+
         }
       }
     },
