@@ -63,6 +63,116 @@ module.exports = {
                     }
                     ]
                 })              
+              }),
+
+              //滚动分类接口
+              app.get('/api/rollinglist', (req, res) => {
+                res.json({
+                  data: [
+                  [
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  }],
+                  [
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  },
+                  {
+                    url: 'https://m.jd.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/20983/16/10753/6124/5c8a16aaE5d6b15d7/01e0e818a7505267.png',
+                    label: '京东超市'
+                  },
+                  {
+                    url: 'http://www.didichuxing.com/',
+                    image: '//m.360buyimg.com/mobilecms/s120x120_jfs/t1/39401/17/2391/5859/5cc06fcfE2ad40668/28cda0a571b4a576.png',
+                    label: '数码电器'
+                  }]
+                  ]
+                })
               })
 
         }
