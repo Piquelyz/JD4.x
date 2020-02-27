@@ -68,7 +68,8 @@
 }
   </script>
 
-  <style lang="stylus" scoped>
+//scoped 代表作用域只在当前页面
+  <style lang="stylus" >
     .cube-tab-bar.botnav
         position fixed
         bottom 0px
