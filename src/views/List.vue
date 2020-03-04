@@ -12,7 +12,7 @@
             <ul>
                 <li v-for="(tag,index) in tags" :key="index">
                     <img :src="tag.image" alt="">
-                    <p>{{tag.label}}</p>
+                    <p>{{tag.label}} <i class="cubeic-add" @click="addToCart($event, tag)"></i></p>
                 </li>
             </ul>
       </cube-scroll>
@@ -108,6 +108,10 @@
             async getclassify(index) {
                 const result = await this.$http.get('/api/classify', {params:{type:index}})
                 this.tags = result.data
+            },
+            //添加商品到购物车,存储到 vuex
+            addToCart(e,tag) {
+                this.$store.commit('toCart', tag)
             }
         },
         created(){
@@ -154,6 +158,7 @@
                     img
                         width 80px
                         height 80px
-
+                    .cubeic-add 
+                        font-size 18px
 
 </style>

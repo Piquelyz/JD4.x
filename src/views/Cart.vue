@@ -14,20 +14,17 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
     export default{
         data() {
             return {
-                cartarr: [
-                    {
-                        title: '小米手机',
-                        cartCount: 5
-                    },
-                    {
-                        title: '华为手机',
-                        cartCount: 6
-                    }
-                ]
+
             }
+        },
+        computed: {
+            ...mapState({
+                cartarr: state => state.cartArray
+            })
         },
         methods: {
             removeCart(index) {
