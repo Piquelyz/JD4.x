@@ -9,7 +9,7 @@
             </div>
         </div>
         <cube-button style="margin: 10px 0;">下单</cube-button>
-        <cube-button>清空购物车</cube-button>
+        <cube-button @click="clearCart()">清空购物车</cube-button>
     </div>
 </template>
 
@@ -27,11 +27,17 @@ import {mapState} from 'vuex'
             })
         },
         methods: {
+            //减少商品, vuex 中数据在刷新页面后会消失, 需要用 localStorage 将数据持久化
             removeCart(index) {
-
+                this.$store.commit('cartRemove', index)
             },
+            //增加商品
             addCart(index) {
-
+                this.$store.commit('cartAdd', index)
+            },
+            // 清空购物车 
+            clearCart() {
+                this.$store.commit('clearCart')
             }
         }
     }

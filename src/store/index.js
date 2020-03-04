@@ -22,7 +22,23 @@ export default new Vuex.Store({
         } else {
           state.cartArray.push({title: tag.label, cartCount: 1})
         }
-      
+    },
+    //购物车数量加1
+    cartAdd(state, index) {
+      state.cartArray[index].cartCount++
+    },
+    cartRemove(state, index) {
+      if(state.cartArray[index].cartCount > 1) {
+        state.cartArray[index].cartCount--
+      } else {
+        if(window.confirm('确定从购物车移除商品吗?')) {
+          state.cartArray.splice(index, 1)
+        }
+      }
+    },
+    //清空购物车
+    clearCart(state) {
+      state.cartArray = []
     }
   },
   actions: {
