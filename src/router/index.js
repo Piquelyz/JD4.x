@@ -52,11 +52,17 @@ const routes = [
       {
         path: 'cart',
         name: 'cart',
+        meta: {
+          requireAuth: true //当有这个字段的时候, 这个路由页面需要有登陆权限
+        },
         component: () => import('../views/Cart.vue')
       },
       {
         path: 'mine',
         name: 'mine',
+        meta: {
+          requireAuth: true //当有这个字段的时候, 这个路由页面需要有登陆权限
+        },
         component: () => import('../views/Mine.vue')
       }
     ]
