@@ -3,10 +3,10 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
-export default new Vuex.Store({
+let store= new Vuex.Store({
   state: {
     token: '',
-    cartArray:[], // 存储购物车商品的数组
+    cartArray:JSON.parse(localStorage.getItem('cartArray')) || [], // 存储购物车商品的数组
   },
   mutations: {
     // 设置 vuex 的 token
@@ -57,3 +57,12 @@ export default new Vuex.Store({
     }
   }
 })
+
+//vuex中内置方法 监听每次 mutation 的调用, 存到 localStorage 
+//每次调用 mutation 时均会先进入这个方法,然后我们可以做一些自己想做的处理
+store.subscribe((mutations, state) =>{
+  //存 到localStorage
+  localStorage.setItem('cartArray', JSON.stringify(state.cartArray))
+})
+
+export default store
